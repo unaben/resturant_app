@@ -1,0 +1,7 @@
+.customer-food-input-container {
+  display: flex;
+}
+
+.customer-food-input-container input {
+  width: 5rem;
+}
