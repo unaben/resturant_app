@@ -9,12 +9,15 @@ type ICustomerFormInputProps = {
 
 const CustomerFormInput: FC<ICustomerFormInputProps> = ({ id }) => {
   const [customerDishes, setCustomerDishes] = useState("");
+
   const dispatch = useAppDispatch();
+
   const handleCustomerFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(addCustomerDishes({ id, dish: customerDishes }));
     setCustomerDishes("");
   };
+
   return (
     <div>
       <form

@@ -14,7 +14,6 @@ export const reservationSlice = createSlice({
       state.reservations.push(actions.payload);
     },
     removeReservation: (state, actions: PayloadAction<number>) => {
-      console.log("action:", actions.payload);
       state.reservations = state.reservations.filter(
         (reservation, index) => index !== actions.payload
       );

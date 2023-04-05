@@ -15,11 +15,9 @@ export const customerSlice = createSlice({
   initialState,
   reducers: {
     addCustomer: (state, action: PayloadAction<ICustomer>) => {
-      console.log("addCustomer: ", action.payload);
       state.customers.push(action.payload);
     },
     addCustomerDishes: (state, action: PayloadAction<ICustomerDishes>) => {
-      console.log("addCustomerDishes: ", action.payload);
       state.customers.forEach((customer) => {
         if (customer.id === action.payload.id) {
           customer.dishes.push(action.payload.dish);

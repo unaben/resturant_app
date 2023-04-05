@@ -14,8 +14,8 @@ const CustomerCard: FC<ICustomerCardProps> = ({ id, name, dishes }) => {
       <p>{name}</p>
       <div className="customer-foods-container">
         <div className="customer-food">
-          {dishes.map((dish, index) => (
-            <p key={index}>{dish}</p>
+          {dishes.map((dish) => (
+            <p key={id}>{dish}</p>
           ))}
         </div>
         <CustomerFormInput id={id} />
